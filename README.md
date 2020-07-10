@@ -18,7 +18,7 @@ Nuvoton's DAT <------> PD0 on AVR
 
 If you want to use it do following:
 1) Copy library to your project.
-2) Delete all nescessary files for other platforms like `Nuvoton8051PlatformSpecific_STM32F4.c` and `Nuvoton8051PlatformSpecific_STM32F4.h`. Only files `Nuvoton8051.c`, `Nuvoton8051.h`, `Nuvoton8051PlatformSpecific_AVR.c` and `Nuvoton8051PlatformSpecific_AVR.h` must be present.
+2) Delete all unnescessary files for other platforms like `Nuvoton8051PlatformSpecific_STM32F4.c` and `Nuvoton8051PlatformSpecific_STM32F4.h`. Only files `Nuvoton8051.c`, `Nuvoton8051.h`, `Nuvoton8051PlatformSpecific_AVR.c` and `Nuvoton8051PlatformSpecific_AVR.h` must be present.
 3) Rename `Nuvoton8051PlatformSpecific_AVR.c` -> `Nuvoton8051PlatformSpecific.c` (remove `_AVR` suffix from name)
 4) Rename `Nuvoton8051PlatformSpecific_AVR.h` -> `Nuvoton8051PlatformSpecific.h` (remove `_AVR` suffix from name)
 5) Include library into your app using `#include "Nuvoton8051.h"`
@@ -37,7 +37,7 @@ Nuvoton's DAT <------> PD12 on STM32F4
 
 If you want to use it do following:
 1) Copy library to your project.
-2) Delete all nescessary files for other platforms like `Nuvoton8051PlatformSpecific_AVR.c` and `Nuvoton8051PlatformSpecific_AVR.h`. Only files `Nuvoton8051.c`, `Nuvoton8051.h`, `Nuvoton8051PlatformSpecific_STM32F4.c` and `Nuvoton8051PlatformSpecific_STM32F4.h` must be present.
+2) Delete all unnescessary files for other platforms like `Nuvoton8051PlatformSpecific_AVR.c` and `Nuvoton8051PlatformSpecific_AVR.h`. Only files `Nuvoton8051.c`, `Nuvoton8051.h`, `Nuvoton8051PlatformSpecific_STM32F4.c` and `Nuvoton8051PlatformSpecific_STM32F4.h` must be present.
 3) Rename `Nuvoton8051PlatformSpecific_STM32F4.c` -> `Nuvoton8051PlatformSpecific.c` (remove `_STM32F4` suffix from name)
 4) Rename `Nuvoton8051PlatformSpecific_STM32F4.h` -> `Nuvoton8051PlatformSpecific.h` (remove `_STM32F4` suffix from name)
 5) Include library into your app using `#include "Nuvoton8051.h"`
