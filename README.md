@@ -67,8 +67,8 @@ int main(void) {
 	
 	// print cid, did and pid variable here.
 	
-    while (1) {
-    }
+	while (1) {
+	}
 }
 ```
 
@@ -89,8 +89,8 @@ int main(void) {
 	
 	// print content of buffer
 	
-    while (1) {
-    }
+	while (1) {
+	}
 }
 ```
 
