@@ -24,7 +24,7 @@ If you want to use it do following:
 5) Include library into your app using `#include "Nuvoton8051.h"`
 6) Write and test your application code. See examples bellow.
 
-## STM3F4 
+## STM32F4 
 Provided platform spcific files uses StdPeriph driver. If you use another driver consider implementing platform spcific functions in the same way as if you are running on unsupported platform. While it looks strange on the first look It is easy. Use `Nuvoton8051PlatformSpecific_STM32F4.c` as reference.
 
 Default pinout is following:
