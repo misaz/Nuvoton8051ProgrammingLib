@@ -150,11 +150,11 @@ void Nuvoton8051_EraseCFG() {
 }
 
 void Nuvoton8051_EntryMode() {
-	Nuvoton8051_DelayUs(20000);
+	Nuvoton8051_DelayUs(200);
 
 	for (int i = 0; i < 25; i++) {
 		Nuvoton8051_GpioSetRstState((0x9e1cb6 >> (24 - i)) & 1);
-		Nuvoton8051_DelayUs(10000);
+		Nuvoton8051_DelayUs(100);
 	}
 
 	Nuvoton8051_DelayUs(100);
