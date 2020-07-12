@@ -11,9 +11,9 @@ If you want to use it on platform that is not implemented. Just implement functi
 Provided platform specific files directly access GPIO registers (PORTx, PINx, DDRx) and for delay uses `_delay_us` function. Default pinout is following:
 
 ```
-Nuvoton's RST <------> PD1 on AVR
-Nuvoton's CLK <------> PD4 on AVR
-Nuvoton's DAT <------> PD0 on AVR
+Nuvoton's    RST <------> PD1 on AVR
+Nuvoton's ICPCLK <------> PD4 on AVR
+Nuvoton's ICPDAT <------> PD0 on AVR
 ```
 
 If you want to use it do following:
@@ -32,9 +32,9 @@ Note that you must diconnect any 5V power suply when connected to STM32 and powe
 Default pinout is following:
 
 ```
-Nuvoton's RST <------> PG2  on STM32F4
-Nuvoton's CLK <------> PD14 on STM32F4
-Nuvoton's DAT <------> PD12 on STM32F4
+Nuvoton's    RST <------> PG2  on STM32F4
+Nuvoton's ICPCLK <------> PD14 on STM32F4
+Nuvoton's ICPDAT <------> PD12 on STM32F4
 ```
 
 If you want to use it do following:
@@ -49,9 +49,9 @@ If you want to use it do following:
 There are also provided implementation that could run on Raspberry Pi and many other single board computers running Linux, tak can control GPIO ports using `/sys/class/gpio`. File system. Note that you must diconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi. Default pinout is following:
 
 ```
-Nuvoton's RST <------> GPIO2 (pin #1) on Raspberry Pi
-Nuvoton's CLK <------> GPIO3 (pin #3) on Raspberry Pi
-Nuvoton's DAT <------> GPIO4 (pin #5) on Raspberry Pi
+Nuvoton's    RST <------> GPIO2 (pin #1) on Raspberry Pi
+Nuvoton's ICPCLK <------> GPIO3 (pin #3) on Raspberry Pi
+Nuvoton's ICPDAT <------> GPIO4 (pin #5) on Raspberry Pi
 ```
 
 If you want to use it do following:
