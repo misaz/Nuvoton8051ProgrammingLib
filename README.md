@@ -21,7 +21,7 @@ Nuvoton's ICPDAT <------> PD0 on AVR
 > :warning: Note that if you do not running AVR on the same voltage as Nuvoton you must modify your pinout with logic level convertor or something similar. Also note that some pasive logic converters won't work with signals as fast as 1MHz which is used when programming device.
 
 If you want to use it do following:
-1) Copy library to your project.
+1) Copy library to your project (contents of src folder).
 2) Delete all unnescessary files for other platforms like `Nuvoton8051PlatformSpecific_STM32F4.c` and `Nuvoton8051PlatformSpecific_STM32F4.h`. Only files `Nuvoton8051.c`, `Nuvoton8051.h`, `Nuvoton8051PlatformSpecific_AVR.c` and `Nuvoton8051PlatformSpecific_AVR.h` must be present.
 3) Rename `Nuvoton8051PlatformSpecific_AVR.c` -> `Nuvoton8051PlatformSpecific.c` (remove `_AVR` suffix from name)
 4) Rename `Nuvoton8051PlatformSpecific_AVR.h` -> `Nuvoton8051PlatformSpecific.h` (remove `_AVR` suffix from name)
@@ -46,7 +46,7 @@ Nuvoton's ICPDAT <------> PD12 on STM32F4
 > :warning: Note that if you do not running STM32F4 on the same voltage as Nuvoton (3V in this example) you must modify your pinout with logic level convertor or something similar. Also note that some pasive logic converters won't work with signals as fast as 1MHz which is used when programming device.
 
 If you want to use it do following:
-1) Copy library to your project.
+1) Copy library to your project (contents of src folder).
 2) Delete all unnescessary files for other platforms like `Nuvoton8051PlatformSpecific_AVR.c` and `Nuvoton8051PlatformSpecific_AVR.h`. Only files `Nuvoton8051.c`, `Nuvoton8051.h`, `Nuvoton8051PlatformSpecific_STM32F4.c` and `Nuvoton8051PlatformSpecific_STM32F4.h` must be present.
 3) Rename `Nuvoton8051PlatformSpecific_STM32F4.c` -> `Nuvoton8051PlatformSpecific.c` (remove `_STM32F4` suffix from name)
 4) Rename `Nuvoton8051PlatformSpecific_STM32F4.h` -> `Nuvoton8051PlatformSpecific.h` (remove `_STM32F4` suffix from name)
@@ -65,7 +65,7 @@ Nuvoton's ICPDAT <------> GPIO4 (pin #7) on Raspberry Pi
 ```
 
 If you want to use it do following:
-1) Copy library to your project.
+1) Copy library to your project (contents of src folder).
 2) Delete all unnescessary files for other platforms like `Nuvoton8051PlatformSpecific_AVR.c` and `Nuvoton8051PlatformSpecific_AVR.h`. Only files `Nuvoton8051.c`, `Nuvoton8051.h`, `Nuvoton8051PlatformSpecific_RaspberryPi.c` and `Nuvoton8051PlatformSpecific_RaspberryPi.h` must be present.
 3) Rename `Nuvoton8051PlatformSpecific_RaspberryPi.c` -> `Nuvoton8051PlatformSpecific.c` (remove `_RaspberryPi` suffix from name)
 4) Rename `Nuvoton8051PlatformSpecific_RaspberryPi.h` -> `Nuvoton8051PlatformSpecific.h` (remove `_RaspberryPi` suffix from name)
