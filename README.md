@@ -54,7 +54,9 @@ If you want to use it do following:
 6) Write and test your application code. See examples bellow.
 
 ## Raspberry Pi
-There are also provided implementation that could run on Raspberry Pi and many other single board computers running Linux, tak can control GPIO ports using `/sys/class/gpio`. File system. Note that you must diconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi. Default pinout is following:
+There are also provided implementation that could run on Raspberry Pi and many other single board computers running Linux that can control GPIO ports using `/sys/class/gpio`. File system. 
+
+> :warning: Note that you must diconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi. Default pinout is following:
 
 ```
 Nuvoton's    GND <------> GND   (pin #9) on Raspberry Pi
