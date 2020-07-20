@@ -46,7 +46,7 @@ int main(void) {
 	Nuvoton8051_EntryMode();
 	
 	// reads flash per 128 B blocks because of limited AVR RAM size.
-	for (int i = 0; i < 16; i++) {
+	for (int i = 0; i < 32; i++) {
 		Nuvoton8051_ReadFlash(i * 128, 128, buffer);
 		UART_PrintBuffer(buffer, 128);
 	}
