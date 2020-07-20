@@ -56,7 +56,7 @@ If you want to use it do following:
 ## Raspberry Pi
 There are also provided implementation that could run on Raspberry Pi and many other single board computers running Linux that can control GPIO ports using `/sys/class/gpio`. File system. 
 
-> :warning: Note that you must diconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi. Default pinout is following:
+Default pinout is following:
 
 ```
 Nuvoton's    GND <------> GND   (pin #9) on Raspberry Pi
@@ -65,6 +65,8 @@ Nuvoton's    RST <------> GPIO2 (pin #3) on Raspberry Pi
 Nuvoton's ICPCLK <------> GPIO3 (pin #5) on Raspberry Pi
 Nuvoton's ICPDAT <------> GPIO4 (pin #7) on Raspberry Pi
 ```
+
+> :warning: Note that you must diconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi.
 
 If you want to use it do following:
 1) Copy library to your project (contents of src folder).
