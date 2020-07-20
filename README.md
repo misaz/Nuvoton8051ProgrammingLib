@@ -11,10 +11,14 @@ If you want to use it on platform that is not implemented. Just implement functi
 Provided platform specific files directly access GPIO registers (PORTx, PINx, DDRx) and for delay uses `_delay_us` function. Default pinout is following:
 
 ```
+Nuvoton's    GND <------> GND on AVR
+Nuvoton's    VCC <------> 5V  on AVR
 Nuvoton's    RST <------> PD1 on AVR
 Nuvoton's ICPCLK <------> PD4 on AVR
 Nuvoton's ICPDAT <------> PD0 on AVR
 ```
+
+> :warning: Note that if you do not running AVR on the same voltage as Nuvoton you must modify your pinout with logic level convertor or something similar. Also note that some pasive logic converters won't work with signals as fast as 1MHz which is used when programming device.
 
 If you want to use it do following:
 1) Copy library to your project.
@@ -32,10 +36,14 @@ Note that you must diconnect any 5V power suply when connected to STM32 and powe
 Default pinout is following:
 
 ```
+Nuvoton's    GND <------> GND  on STM32F4
+Nuvoton's    VCC <------> 3V   on STM32F4
 Nuvoton's    RST <------> PG2  on STM32F4
 Nuvoton's ICPCLK <------> PD14 on STM32F4
 Nuvoton's ICPDAT <------> PD12 on STM32F4
 ```
+
+> :warning: Note that if you do not running STM32F4 on the same voltage as Nuvoton (3V in this example) you must modify your pinout with logic level convertor or something similar. Also note that some pasive logic converters won't work with signals as fast as 1MHz which is used when programming device.
 
 If you want to use it do following:
 1) Copy library to your project.
@@ -49,9 +57,11 @@ If you want to use it do following:
 There are also provided implementation that could run on Raspberry Pi and many other single board computers running Linux, tak can control GPIO ports using `/sys/class/gpio`. File system. Note that you must diconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi. Default pinout is following:
 
 ```
-Nuvoton's    RST <------> GPIO2 (pin #1) on Raspberry Pi
-Nuvoton's ICPCLK <------> GPIO3 (pin #3) on Raspberry Pi
-Nuvoton's ICPDAT <------> GPIO4 (pin #5) on Raspberry Pi
+Nuvoton's    GND <------> GND   (pin #9) on Raspberry Pi
+Nuvoton's    VCC <------> 3V    (pin #1) on Raspberry Pi
+Nuvoton's    RST <------> GPIO2 (pin #3) on Raspberry Pi
+Nuvoton's ICPCLK <------> GPIO3 (pin #5) on Raspberry Pi
+Nuvoton's ICPDAT <------> GPIO4 (pin #7) on Raspberry Pi
 ```
 
 If you want to use it do following:
@@ -85,7 +95,7 @@ Library is provided without any warranty. Use it on your own risk.
 # Examples
 
 ## Read CID, PID and DID of device
-This is good point to start. Following code prints CID, DID and PID of device. It could be used as verification that connection and interface with device is working.
+This is good point to start. Following code prints CID, DID and PID of device. It could be used as verification that connection and interface with device is working. This example can be found implemented for each platform in examples directory.
 
 ```
 #include "Nuvoton8051.h"
@@ -108,6 +118,7 @@ int main(void) {
 ```
 
 ## Read first 2048 bytes of program flash
+Following examples read content of attached Nuvoton's flash contents into program buffer. This example can be found implemented for each platform in examples directory.
 
 ```
 #include "Nuvoton8051.h"
@@ -130,6 +141,7 @@ int main(void) {
 ```
 
 ## Erase device and write content of buffer to program flash
+Following example erases whole device and program it using content of specified buffer. This example can be found implemented for each platform in examples directory.
 
 ```
 #include "Nuvoton8051.h"
