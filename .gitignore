@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs
+/examples/AVR_01_DeviceInfo/.vs
+/examples/AVR_01_DeviceInfo/AVR_01_DeviceInfo/Debug
