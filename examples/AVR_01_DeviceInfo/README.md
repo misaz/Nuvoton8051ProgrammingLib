@@ -18,3 +18,5 @@ CID: 0xda
 DID: 0x3650
 PID: 0x3650
 ```
+
+If you see only 0xff and 0xffff values check your wiring and check that your Nuvoton is powered.

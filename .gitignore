@@ -5,3 +5,5 @@
 /.vs
 /examples/AVR_01_DeviceInfo/.vs
 /examples/AVR_01_DeviceInfo/AVR_01_DeviceInfo/Debug
+/examples/AVR_02_ReadFlash/.vs/AVR_02_ReadFlash/v14
+/examples/AVR_02_ReadFlash/AVR_02_ReadFlash/Debug
