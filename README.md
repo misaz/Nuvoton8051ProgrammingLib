@@ -66,7 +66,7 @@ Nuvoton's ICPCLK <------> GPIO3 (pin #5) on Raspberry Pi
 Nuvoton's ICPDAT <------> GPIO4 (pin #7) on Raspberry Pi
 ```
 
-> :warning: Note that you must diconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi.
+> :warning: Note that you must disconnect any 5V power suply when connected to Raspberry Pi and power Nuvoton only by 3.3V max. Otherwise you burn your Raspberry Pi.
 
 If you want to use it do following:
 1) Copy library to your project (contents of src folder).
